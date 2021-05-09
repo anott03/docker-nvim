@@ -1,5 +1,7 @@
-vim.cmd [[ set rtp+=/nvim/pack/packer.nvim ]]
-vim.cmd [[ set rtp+=/nvim/conf ]]
-
-require('a.plugins')
-require('a.settings')
+require('a.plugins').setup()
+require('a.plugins').initialize_plugins()
+require('a.settings').setup()
+require('a.lsp-settings').set_languages()
+require('a.keybindings').setup()
+require('a.augroups').setup()
+require('a.statusline').setup()
